@@ -1,0 +1,1 @@
+# Test-task-for-the-position-of-Junior-Python-Developer
