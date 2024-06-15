@@ -10,7 +10,7 @@ from main import MainProgram
 program = MainProgram()
 
 # Telegram API token
-API = '5913335392:AAEpoOAsSO1saRKIHDkb3f-pbYDz5DqUWEc'
+API = 'Your API token'
 
 # Bot object
 bot = Bot(token=API)
@@ -20,7 +20,7 @@ dp = Dispatcher()
 
 # Handler for the /start command
 @dp.message(Command("start"))
-async def cmd_start(message: types.Message):
+async def cmd_start(message: types.Message) -> None:
     """
     Function to send a message in response to the /start command.
 
@@ -41,7 +41,7 @@ Part 2. Implement a Telegram bot to get vacancy statistics.
 
 # Handler for the /get_today_statistic command
 @dp.message(Command("get_today_statistic"))
-async def get_today_statistic(message: types.Message):
+async def get_today_statistic(message: types.Message) -> None:
     """
     Function to send a file in response to the /get_today_statistic command.
 
@@ -61,7 +61,7 @@ async def get_today_statistic(message: types.Message):
 
 
 # Function to start polling for new updates
-async def main():
+async def main() -> None:
     """
     Function to start polling for new updates.
 
@@ -71,7 +71,7 @@ async def main():
 
 
 # Function to start the program
-async def run_bot():
+async def run_bot() -> None:
     """
     Function to run the main program and the bot concurrently.
 

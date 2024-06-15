@@ -20,7 +20,7 @@ class MainProgram():
         self._data_rec = DataRecording()
         self.curr_date = datetime.now().strftime('%Y-%m-%d')
 
-    def get_curr_date(self):
+    def get_curr_date(self) -> str:
         """
         Function to return the current year, month, and date.
 
@@ -28,7 +28,7 @@ class MainProgram():
         """
         return self.curr_date
 
-    def set_curr_date(self):
+    def set_curr_date(self) -> None:
         """
         Function to set the current year, month, and date.
 
@@ -36,7 +36,7 @@ class MainProgram():
         """
         self.curr_date = datetime.now().strftime('%Y-%m-%d')
 
-    def get_file(self):
+    def get_file(self) -> str:
         """
         Function to return the shortened path to the Excel file.
 
@@ -44,7 +44,7 @@ class MainProgram():
         """
         return self._data_rec.get_file_name()
 
-    def check_file_exists(self, file_path):
+    def check_file_exists(self, file_path) -> bool:
         """
         Function to check if a file exists in the directory.
 
@@ -53,7 +53,7 @@ class MainProgram():
         """
         return os.path.exists(file_path)
 
-    def set_config(self):
+    def set_config(self) -> None:
         """
         Function to set the values for the current date and file name in the DataRecording class.
 
@@ -62,7 +62,7 @@ class MainProgram():
         self._data_rec.set_curr_data()
         self._data_rec.set_file_name()
 
-    async def run(self):
+    async def run(self) -> None:
         """
         Main function of the program, which runs asynchronously, allowing it to execute every hour.
 
@@ -109,7 +109,7 @@ class MainProgram():
             # Repeat the procedure in an hour
             await asyncio.sleep(60 * 60)  # 60 minutes * 60 seconds = 1 hour
 
-    def start(self):
+    def start(self) -> None:
         """
         Function to start the program.
 
