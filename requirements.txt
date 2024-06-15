@@ -1,0 +1,7 @@
+aiogram
+asyncio
+pandas
+selenium
+xlsxwriter
+sqlite3
+datetime
